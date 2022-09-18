@@ -1,0 +1,2 @@
+# kaidoku
+Japanese text analyzer
