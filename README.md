@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # kaidoku
 Japanese text analyzer
 =======
