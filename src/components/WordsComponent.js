@@ -3,7 +3,7 @@ import Main from './MainComponent';
 
 function Words(props) {
     return (
-        <div className="container">
+        <div className="container-fluid">
             <div className="row align-items-start">
                 <h1>Words route</h1>
             </div>

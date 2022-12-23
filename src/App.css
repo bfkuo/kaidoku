@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Gurajada');
 
+body {
+  background-color: #D3DDF0;
+  font-family: 'Hiragino Sans';
+}
+
+.container {
+  margin: 10px 40px;
+}
+
 .navbar-dark {
   background-color: #513ADB;
   color: #D3DDF0;
@@ -17,4 +26,55 @@
   font-size: 80%;
   text-transform: uppercase;
   padding: 0px 15px;
+}
+
+.fragment {
+  background-color: #F6F9FF;
+  color: #3B3E54;
+  margin: 3vmax 0;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.fragment h3 {
+  font-family: 'Gurajada';
+  font-size: 180%;
+  text-transform: uppercase;
+  color: #6665DD;
+}
+
+.fragment h5 {
+  font-weight: 600;
+  font-size: 1.3vmax;
+  white-space: nowrap;
+}
+
+.fragment hr {
+  background-color: #1A1B25;
+  opacity: 100%;
+  margin-bottom: 30px;
+}
+
+.btn-outline-dark {
+  border-color:#6665DD;
+  padding: 15%;
+}
+
+.btn-outline-dark:hover {
+  border-color:#6665DD;
+  background-color: #EEEEFB;
+}
+
+.progress {
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #6665DD;
+}
+
+.progress-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

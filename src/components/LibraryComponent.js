@@ -3,7 +3,7 @@ import Main from './MainComponent';
 
 function Library(props) {
     return (
-        <div className="container">
+        <div className="containe-fluid">
             <div className="row align-items-start">
                 <h1>Library route</h1>
             </div>
