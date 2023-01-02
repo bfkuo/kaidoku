@@ -5,6 +5,10 @@ body {
   font-family: 'Hiragino Sans';
 }
 
+p {
+  font-size: 70%;
+}
+
 .container {
   margin: 10px 40px;
 }
@@ -31,7 +35,7 @@ body {
 .fragment {
   background-color: #F6F9FF;
   color: #3B3E54;
-  margin: 3vmax 0;
+  margin: 3vmax 0 0 0;
   border-radius: 10px;
   padding: 20px 15px;
 }
@@ -45,7 +49,7 @@ body {
 
 .fragment h5 {
   font-weight: 600;
-  font-size: 1.3vmax;
+  font-size: 70%;
   white-space: nowrap;
 }
 
@@ -58,11 +62,18 @@ body {
 .btn-outline-dark {
   border-color:#6665DD;
   padding: 15%;
+  width: 100%;
 }
 
 .btn-outline-dark:hover {
+  transition-duration: 0.4s;
   border-color:#6665DD;
   background-color: #EEEEFB;
+}
+
+.btn-outline-dark:active {
+  background-color: #EEEEFB !important;
+  border-color: #513ADB !important;
 }
 
 .progress {
@@ -78,3 +89,4 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
