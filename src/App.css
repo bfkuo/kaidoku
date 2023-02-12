@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Gurajada');
+
+body {
+  background-color: #D3DDF0;
+  font-family: 'Hiragino Sans';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size: 70%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  margin: 10px 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-dark {
+  background-color: #513ADB;
+  color: #D3DDF0;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-brand {
+  font-family: 'Gurajada';
+  font-size: 300%;
+  text-transform: lowercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  font-family: 'Hiragino Sans';
+  font-weight: 700;
+  font-size: 80%;
+  text-transform: uppercase;
+  padding: 0px 15px;
 }
+
+.fragment {
+  background-color: #F6F9FF;
+  color: #3B3E54;
+  margin: 3vmax 0 0 0;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.fragment h3 {
+  font-family: 'Gurajada';
+  font-size: 180%;
+  text-transform: uppercase;
+  color: #6665DD;
+}
+
+.fragment h5 {
+  font-weight: 600;
+  font-size: 70%;
+  white-space: nowrap;
+}
+
+.fragment hr {
+  background-color: #1A1B25;
+  opacity: 100%;
+  margin-bottom: 30px;
+}
+
+.btn-outline-dark {
+  border-color:#6665DD;
+  padding: 15%;
+  width: 100%;
+}
+
+.btn-outline-dark:hover {
+  transition-duration: 0.4s;
+  border-color:#6665DD;
+  background-color: #EEEEFB;
+}
+
+.btn-outline-dark:active {
+  background-color: #EEEEFB !important;
+  border-color: #513ADB !important;
+}
+
+.progress {
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #6665DD;
+}
+
+.progress-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
