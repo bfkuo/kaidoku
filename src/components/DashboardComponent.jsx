@@ -22,6 +22,7 @@ const Dashboard = (props) => {
 }
 
 const Analyze = (props) => {
+    //Allow user to upload / paste here, then navigate to next page!
     return (
         <div className="row fragment">
             <h3>Analyze</h3>
@@ -41,7 +42,9 @@ const Analyze = (props) => {
                 </div>
                 <div className=" col-4 px-3 px-xl-5">
                     <h5>Paste text</h5>
-                    <button type="button" className="btn btn-outline-dark" role="button">
+                    <button type="button" className="btn btn-outline-dark" role="button" onClick={() => {
+                        //set mode to text input or something
+                    }}>
                         <img src="assets/images/paste.png" width="100%" />
                     </button>
                 </div>

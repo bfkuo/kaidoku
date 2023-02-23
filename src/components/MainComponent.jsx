@@ -6,6 +6,7 @@ import About from './AboutComponent';
 import Library from './LibraryComponent';
 import Words from './WordsComponent';
 import Account from './AccountComponent';
+import Analyze from './AnalyzeComponent';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -24,6 +25,7 @@ class Main extends Component {
                     <Route path="/library" element={<Library />} />
                     <Route path="/words" element={<Words />} />
                     <Route path="/account" element={<Account />} />
+                    <Route path="/analyze" element={<Analyze />} />
                 </Routes>
                 <Footer />
             </div>
