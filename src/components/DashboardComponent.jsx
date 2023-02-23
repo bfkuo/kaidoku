@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useRef } from 'react';
 import { Heatmap, BarGraph }from './GraphComponents';
 import { Progress } from 'reactstrap';
+import { setFullText } from '../slices/analyzeSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = (props) => {
     return(
@@ -23,6 +25,30 @@ const Dashboard = (props) => {
 
 const Analyze = (props) => {
     //Allow user to upload / paste here, then navigate to next page!
+    const inputFile = useRef(null);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        console.log("changed " + inputFile.current)
+        if(inputFile.current == null) return;
+        if(inputFile.current.value == null) return;
+        if(inputFile.current.value === '') return;
+        console.log('lets get it ' + JSON.stringify(inputFile.current.value))
+        const file = inputFile.current.value;
+        if(file != null) {
+            const reader = new FileReader();
+            reader.readAsText(file,'UTF-8');
+            reader.onload = r => {
+                const text = r.target.result;
+                if(text != null) {
+                    setFullText(text);
+                    navigate('analyze');
+                }
+            }
+        }
+        
+    }, [inputFile.current]);
+
     return (
         <div className="row fragment">
             <h3>Analyze</h3>
@@ -30,8 +56,8 @@ const Analyze = (props) => {
             <div className="row">
                 <div className="col-4 px-3 px-xl-5">
                     <h5>Upload a file</h5>
-                    <button type="button" className="btn btn-outline-dark" role="button">
-                        <img src="assets/images/upload.png" width="100%" />
+                    <button type="button" className="btn btn-outline-dark" role="button" onClick={() => inputFile.current?.click()}>
+                        <img src="assets/images/upload.png" width="100%"/><input type="file" ref={inputFile} className='file-hidden'></input>
                     </button>
                 </div>
                 <div className=" col-4 px-3 px-xl-5">

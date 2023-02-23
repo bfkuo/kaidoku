@@ -90,3 +90,6 @@ p {
   text-overflow: ellipsis;
 }
 
+.file-hidden {
+  display: none;
+}
