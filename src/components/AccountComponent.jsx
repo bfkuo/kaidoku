@@ -1,19 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../slices/userSlice';
-
-function bodyToFormEncoded(o) {
-    if (o == null) return {};
-    let formBody = [];
-
-    Object.keys(o).forEach((key) => {
-        console.log(`key ${key} ok ${o[key]}`)
-        formBody.push(encodeURIComponent(key) + "=" + encodeURIComponent(o[key]));
-    });
-
-    formBody = formBody.join("&");
-    return formBody;
-}
+import { REQUEST_BODY_TYPES, REQUEST_TYPES } from '../utils/constants';
+import { apiRequest } from '../utils/req';
 
 async function doLogin(user,pass) {
     //TODO: change this
@@ -23,13 +12,7 @@ async function doLogin(user,pass) {
     };
 
     try {
-        let possibleUser = await fetch('http://127.0.0.1:5000/login', {
-            method:"POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-            },
-            body:bodyToFormEncoded(loginInfo)
-        });
+        let possibleUser = await apiRequest(REQUEST_TYPES.POST, loginInfo, REQUEST_BODY_TYPES.URLENCODED);
         return possibleUser;
     } catch (err) {
         console.error(err);

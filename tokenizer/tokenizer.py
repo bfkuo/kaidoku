@@ -3,7 +3,7 @@ from konoha import WordTokenizer, SentenceTokenizer
 class Tokenizer:
 
     def __init__(self) -> None:
-        self.word_tokenizer = WordTokenizer('nagisa')
+        self.word_tokenizer = WordTokenizer('MeCab')
         self.sentence_tokenizer = SentenceTokenizer()
 
     def tokenize_text(self, text=""):
